@@ -64,6 +64,8 @@ if [ "$initialize" == "yes" ]; then
     devpi user -m root "password=$DEVPI_PASSWORD"
     echo -n "$DEVPI_PASSWORD" > "$DEVPISERVER_SERVERDIR/.root_password"
     devpi index -y -c public pypi_whitelist='*'
+    devpi index root/pypi  "mirror_web_url_fmt=$PIP_INDEX_URL/{name}/" \
+        "mirror_url=$PIP_INDEX_URL/"
     devpi logoff
 fi
 

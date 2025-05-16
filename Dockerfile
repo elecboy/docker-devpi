@@ -7,7 +7,7 @@ LABEL \
 
 # Set environment variables
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1
-ENV PIP_INDEX_URL=https://pypi.python.org/simple
+ENV PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple
 ENV PIP_TRUSTED_HOST=127.0.0.1
 ENV VIRTUAL_ENV=/env
 
